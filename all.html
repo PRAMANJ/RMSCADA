@@ -1,0 +1,223 @@
+<html>
+<head>
+<script type="text/javascript" src="https://pubnub.github.io/eon/v/eon/1.0.0/eon.js"></script>
+<link type="text/css" rel="stylesheet" href="https://pubnub.github.io/eon/v/eon/1.0.0/eon.css" />
+<style>
+.panel {
+    background-color:#eeeeee;
+    height:300px;
+    width:400px;
+    float:left;
+    margin: 10px;
+   border: 1px solid black;	      
+}
+.smallpanel {
+    background-color:#eeeeee;
+    height:140px;
+    width:200px;
+    float:left;
+    margin: 10px;
+   border: 1px solid black;	      
+}
+.largepanel {
+    background-color:#eeeeee;
+    height:600px;
+    width:800px;
+    float:left;
+    margin: 10px;
+   border: 1px solid black;	      
+}
+</style>
+
+<h1>Dash Boards</h1>
+  </head>
+  <body>
+    <div id="trend" class="largepanel"></div>
+    <div id="bar" class="panel"></div>
+    <div id="gauge" class="smallpanel"></div>
+    <div id="gauge1" class="smallpanel"></div>
+    <div id="gauge2" class="smallpanel"></div>
+    <div id="gauge3" class="smallpanel"></div>
+    <div id="pie" class="panel"></div>
+    <script src="config.js"></script>
+    <script type="text/javascript">
+	    var channelbar = 'EON_BAR_5_BAR1';
+	    var channelgauge = 'EON_GAUGE_5_GAUGE1';
+	    var channelpie = 'EON_PIE_5_PIE1';
+	    var channeltrend = 'EON_CHART_5_CHART1';
+
+        var pubnub = new PubNub({
+        subscribeKey: subscribe_key,
+        publishKey: publish_key,
+        ssl:true
+      });
+
+        eon.chart({
+          pubnub: pubnub,
+          channels: ['EON_BAR_5_BAR1'],
+          history: false,
+		rate: 5000,
+          debug: true,
+          generate: {
+            bindto: '#bar',
+            data: {
+              labels: true,
+              type: 'bar'
+            },
+            bar: {
+              width: {
+                ratio: 0.5
+              }
+            }
+          }
+        });
+              
+        eon.chart({
+          pubnub: pubnub,
+          channels: ['EON_GAUGE_5_GAUGE1'],
+		rate: 5000,
+          generate: {
+            bindto: '#gauge',
+            data: {
+              type: 'gauge'
+            }
+          }
+        });      
+              
+        eon.chart({
+          pubnub: pubnub,
+          channels: ['EON_GAUGE_5_GAUGE2'],
+		rate: 5000,
+          generate: {
+            bindto: '#gauge1',
+            data: {
+              type: 'gauge'
+            }
+          }
+        });
+        
+        eon.chart({
+          pubnub: pubnub,
+          channels: ['EON_GAUGE_5_GAUGE3'],
+		rate: 5000,
+          generate: {
+            bindto: '#gauge2',
+            data: {
+              type: 'gauge'
+            }
+          }
+        });
+        
+       
+        eon.chart({
+          pubnub: pubnub,
+          channels: ['EON_GAUGE_5_GAUGE4'],
+		rate: 5000,
+          generate: {
+            bindto: '#gauge3',
+            data: {
+              type: 'gauge'
+            }
+          }
+        });
+
+
+        eon.chart({
+          pubnub: pubnub,
+          channels: ['EON_PIE_5_PIE1'],
+		rate: 5000,
+          history: false,
+          debug: true,
+          generate: {
+            bindto: '#pie',
+            data: {
+              labels: true,
+              type: 'pie'
+            },
+            bar: {
+              width: {
+                ratio: 0.5
+              }
+            }
+          }
+        });
+
+        eon.chart({
+          channels: ['EON_CHART_5_CHART1'],
+          history: false,
+		rate: 5000,
+          flow: true,
+          pubnub: pubnub,
+          generate: {
+            bindto: '#trend',
+            data: {
+              type: 'spline',
+              labels: true
+            },
+        axis: {
+            x: {
+              label: "time"
+            },
+            y: {
+              label: "temperature"
+            }
+          },
+          grid: {
+            x: {
+              show: false 
+            },
+            y: {
+              show: false 
+            }
+          },
+          }
+        });
+		
+/*	  setTimeout(
+		  setInterval(function(){
+//console.log("Publishing");
+			pubnub.publish({
+			  channel: 'EON_BAR_5_BAR1',
+			  message: {
+				'eon': {
+				  "Austin": Math.floor(Math.random() * 99),
+				  "New York": Math.floor(Math.random() * 99),
+				  "San Francisco": Math.floor(Math.random() * 99),
+				  "Portland": Math.floor(Math.random() * 99)
+				}
+			  }
+			});
+			pubnub.publish({
+			  channel: 'EON_GAUGE_5_GAUGE1',
+			  message: {
+				'eon': {
+				  "Austin": Math.floor(Math.random() * 99)
+				}
+			  }
+			});
+			pubnub.publish({
+			  channel: 'EON_PIE_5_PIE1',
+			  message: {
+				'eon': {
+				  "Austin": Math.floor(Math.random() * 99),
+				  "New York": Math.floor(Math.random() * 99),
+				  "San Francisco": Math.floor(Math.random() * 99),
+				  "Portland": Math.floor(Math.random() * 99)
+				}
+			  }
+			});
+			pubnub.publish({
+			  channel: 'EON_CHART_5_CHART1',
+			  message: {
+				'eon': {
+				  "Austin": Math.floor(Math.random() * 99),
+				  "New York": Math.floor(Math.random() * 99),
+				  "San Francisco": Math.floor(Math.random() * 99),
+				  "Portland": Math.floor(Math.random() * 99)
+				}
+			  }
+			});
+		  }, 5000 ) , 3000)*/
+    </script>
+  </body>
+</html>

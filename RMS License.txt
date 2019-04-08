@@ -1,0 +1,21 @@
+RM-SCADA LICENSE:
+
+PRAMANJ Technologies grants you permission to use the RM-SCADA version 1.3 software on purchase of this license subject to your agreement on the following terms and conditions:
+
+1. RM-SCADA software is free for evaluation and trial runs however you have to buy a License for commercial use for every Licensed Ignition Server.
+.
+2. The trial version of RM-SCADA is fully functional software with all its features. 
+
+3. Once you are satisfied with the software you can purchase a license for the product from this web site once you use it for a commercial project, reusing your project configuration done during evaluation.
+
+4. The objective of RM-SCADA software is to provide a remote monitoring capability to monitor some of Ignition SCADA's key parameters on remote dashboards and tables on an HTML device over Internet using PubNub's (www.pubnub.com) cloud services.
+
+5. RM-SCADA allows you to only monitor the plant parameters not to control the plant.
+
+6. You have to abide by the terms and conditions of PubNub for using their cloud services. 
+
+7. RM-SCADA is an add-on module to Ignition SCADA system and its not a standalone product. This means you have to have a licensed or trial version of Ignition SCADA system on your server for RM-SCADA to work with it.
+
+8. You will not reverse engineer the trial version or the licensed version of RM-SCADA to create similar or derivative applications.
+
+9. Once you purchase the RM-SCADA License it is understood that you have evaluated it and are satisfied with the product, there is no obligation on our part and no refund is possible.

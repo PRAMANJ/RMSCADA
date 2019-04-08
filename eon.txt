@@ -1,0 +1,9 @@
+[
+    { 'name':'EON_BAR_5_BAR1', 'tags':['[default]Tag 0','[default]Tag 1','[default]Tag 2','[default]Tag 3','[default]Tag 4']},
+    { 'name':'EON_GAUGE_5_GAUGE1', 'tags':[ '[default]Tag 0']},
+    { 'name':'EON_GAUGE_5_GAUGE2', 'tags':[ '[default]Tag 1']},
+    { 'name':'EON_GAUGE_5_GAUGE3', 'tags':[ '[default]Tag 2']},
+    { 'name':'EON_GAUGE_5_GAUGE4', 'tags':[ '[default]Tag 3']},
+    { 'name':'EON_PIE_5_PIE1', 'tags':[ '[default]Tag 0','[default]Tag 1','[default]Tag 2','[default]Tag 3','[default]Tag 4']},
+    { 'name':'EON_CHART_5_CHART1', 'tags':[ '[default]Tag 0','[default]Tag 1','[default]Tag 2','[default]Tag 3','[default]Tag 4']},
+]
