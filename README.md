@@ -16,6 +16,6 @@ Installing and runing RM SCADA under Ignition:
 8. open the wrapper.log file of Ignition and see that pubnub and timer have started successfully.
 9. right click and open the all.html file in a browser (chrome preferred) and it will display the configured dash boards.
 10 right click open the states.html in a new tab in browser (chrome preferred) it will display the tag values which can be updated manually or set to update automatically every 5 seconds. The number of rows per page can be changed with parameter maxpage (default 10) in states.html file.
-In order to view dash boards and states in a android phone or iPhone, copy the files from main folder C:\RMS (exclude subfolder) using usb cable. The Android file transfer is quite streight forward but for iPhone use instructions give in https://www.maketecheasier.com/how-to-copy-files-tofrom-your-iphone/ . 
-You can passowrd protect the folder on iPhone using the file manager downloaded.
-To open html file in a borwser in Android, you have to download a free app "open in browser"
+11. In order to view dash boards and states in a android phone or iPhone, copy the files from main folder C:\RMS (exclude subfolder) using usb cable. The Android file transfer is quite streight forward but for iPhone use instructions give in https://www.maketecheasier.com/how-to-copy-files-tofrom-your-iphone/ . 
+12. You can passowrd protect the folder on iPhone using the file manager downloaded.
+13. To open html file in a borwser in Android, you have to download a free app "open in browser"
