@@ -13,7 +13,7 @@ Steps for installing and runing RM SCADA under Ignition:
 5. open the file "C:\RMS\config.js" using notepad++ editor and replace the "demo" string with pub/sub keys obtained from PubNub.
 6. The "C:\RMS\project files" folder contains Ignition projects "rms_2019-04-08_1913.zip" and "rms_2019-04-08_1915_partial.proj" for Ignition version 8 and 7.9.10 respectively. Create project named "rms" in your Ignition version and import appropriate project into it.
 7. Start the Ignition server and open the designer and set the "StartPubNub" tag and "StartTimer" tag to true one by one in that sequence.
-8. open the wrapper.log file of Ignition and see that pubnub and timer have started successfully without any exceptions.
+8. open the wrapper.log file of Ignition and see that pubnub and timer have started successfully without any exceptions.(If you get errors such as "pubnub not found" in PubNubScripts file, then stop and restart the Ignition gateway and try again. This is particularly observed in Ignition version 8).
 9. right click and open the all.html file in a browser (chrome preferred) and it will display the configured dash boards.
 10 right click open the states.html in a new tab in browser (chrome preferred) it will display the tag values which can be updated manually or set to update automatically every 5 seconds. The number of rows per page can be changed with parameter maxpage (default 10) in C:\RMS\states.html file.
 11. In order to view dash boards and states in a android phone or iPhone, copy the files from main folder C:\RMS (exclude subfolder) using usb cable. The Android file transfer is quite streight forward (drag and drop) but for iPhone use instructions give in https://www.maketecheasier.com/how-to-copy-files-tofrom-your-iphone/ . 
