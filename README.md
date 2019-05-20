@@ -11,7 +11,7 @@ Steps for installing and runing RM SCADA under Ignition:
 3. copy the pubnub's jar file "pubnub-gson-4.22.0-beta-all.jar" kept under path "C:\RMS\project files" of the downloaded unzipped file to ignition's lib\core\gateway folder e.g. "C:\Program Files\Inductive Automation\Ignition\lib\core\gateway".
 4. create an account in www.PubNub.com portal for youself and create pub/sub keys for use in RMS project (enable history on them on PubNub ).
 5. open the file "C:\RMS\config.js" using notepad++ editor and replace the "demo" string with pub/sub keys obtained from PubNub.
-6. The "C:\RMS\project files" folder contains Ignition projects "rms_2019-04-08_1913.zip" and "rms_2019-04-08_1915_partial.proj" for Ignition version 8 and 7.9.10 respectively. Create project named "rms" in your Ignition version and import appropriate project into it.
+6. The "C:\RMS\project files" folder contains Ignition projects "rms_2019-04-08_1913.zip" and "rms_project_2019-05-20_1108_partial.proj" for Ignition version 8 and 7.9.10 respectively. Create project named "rms" in your Ignition version and import appropriate project into it.
 7. Start the Ignition server and open the designer and set the "StartPubNub" tag and "StartTimer" tag to true one by one in that sequence.
 8. open the wrapper.log file of Ignition and see that pubnub and timer have started successfully without any exceptions.(If you get errors such as "pubnub not found" in PubNubScripts file, then stop and restart the Ignition gateway and try again. This is particularly observed in Ignition version 8).
 9. right click and open the all.html file in a browser (chrome preferred) and it will display the configured dash boards.
