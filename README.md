@@ -19,3 +19,11 @@ Steps for installing and runing RM SCADA under Ignition:
 11. In order to view dash boards and states in a android phone or iPhone, copy the files from main folder C:\RMS (exclude subfolder) using usb cable. The Android file transfer is quite streight forward (drag and drop) but for iPhone use instructions give in https://www.maketecheasier.com/how-to-copy-files-tofrom-your-iphone/ . 
 12. You can passowrd protect the folder on iPhone using the file manager downloaded in above step.
 13. To open html file in a borwser in Android, you have to download a free app "open in browser".
+===================Geo Location tracking files =================
+New files gls.html, gls.js, glc,html, glc.js, users.txt, profiles.txt and new project rms_project_2019-05-27_2310_partial.proj added to include new scripts for geo location tracking and some bug fixes added.
+The downloaded zip file will contain the above new files. Extract the files and copy them under C:/rms as given in step 1 above.
+Modify the config.js to add pubnub keys and modify the gls.html and glc.html files to add the google maps API keys as explained in https://www.pubnub.com/tutorials/javascript/mapping-javascript-tracking/
+Start PubNub as explained in step 7 above. The tmer needs to be started only if you are using EON DashBoards. For GLS its not required.
+Open gls.html in a HTML5 browser (chrome preferred) on Ignition server, and glc.html on client machine or Mobile phone. (you need to copy glc.html, glc.js and config.js on the mobile phone (android or ios) as explained in step 11. 
+Set simulate=false in config.js file and restart gls.html and glc.html to view real geolocation not simulated one.
+The users.txt and profiles.txt are json files for users and password data and profiles data respectively. By default 3 users are defined (admin, guest, visitor with password and password,gues and visitor). Add any number of users and profiles ad you want for your projects.
