@@ -1,0 +1,5 @@
+[
+	{"user":"admin","userpassword":"password","userprofile":"SU"},
+	{"user":"guest","userpassword":"guest","userprofile":"BU"},
+	{"user":"visitor","userpassword":"visitor","userprofile":"TU"}
+]

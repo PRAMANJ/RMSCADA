@@ -1,0 +1,5 @@
+[
+	{"profile":"SU","profileaccess":"RW","profiledes":"SUPER USER"},
+	{"profile":"BU","profileaccess":"RX","profiledes":"BASIC USER"},
+	{"profile":"TU","profileaccess":"RX","profiledes":"TEMP USER"}
+]
