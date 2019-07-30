@@ -19,7 +19,6 @@ Steps for installing and runing RM SCADA under Ignition:
 11. In order to view dash boards and states in a android phone or iPhone, copy the files from main folder C:\RMS (exclude subfolder) using usb cable. The Android file transfer is quite streight forward (drag and drop) but for iPhone use instructions give in https://www.maketecheasier.com/how-to-copy-files-tofrom-your-iphone/ . 
 12. You can passowrd protect the folder on iPhone using the file manager downloaded in above step.
 13. To open html file in a borwser in Android, you have to download a free app "open in browser".
-
 ========= Geo Location tracking (THIS MODULE IS SUSPENDED TEMPORARILY, FILES GLS.HTML AND GLC.HTML ARE DELETED) ============
 14. New files gls.html, gls.js, glc,html, glc.js, users.txt, profiles.txt and new project rms_project_2019-05-27_2310_partial.proj added to include new scripts for geo location tracking and some bug fixes added.
 15. The downloaded zip file will contain the above new files. Extract the files and copy them under C:/rms as given in step 1 above.
@@ -28,7 +27,6 @@ Steps for installing and runing RM SCADA under Ignition:
 18. Open gls.html in a HTML5 browser (chrome preferred) on Ignition server, and glc.html on client machine or Mobile phone. (you need to copy glc.html, glc.js and config.js on the mobile phone (android or ios) as explained in step 11. 
 19. Set simulate=false in config.js file and restart gls.html and glc.html to view real geolocation not simulated one.
 20. The users.txt and profiles.txt are json files for users and password data and profiles data respectively. By default 3 users are defined (admin, guest, visitor with password and password,gues and visitor). Add any number of users and profiles ad you want for your projects.
-
 =================== PubNub Remote Web Service (PRWS) files =============================
 21. This module is like RWS (Restful Web Servies of AR SCADA) module but it uses PubNub instead of webDev for viewing Ignition data on an HTML page. The GitHub repository includes three new files (1) prws.js (2) prws.html and (3) prws1.html in the C:\RMS folder and two new projects (1) rms_project_2019-07-30_2300_partial.proj for Ignition version 7.9.10 and (2) rms_2019-07-30_2120.zip for Ignition version 8. A few files such as config.js , states.html and states.js have been modified.
 22. Execute steps 1 to 8 above for RMS module, except that in step 7 set only StartPubNub tag not the StartTimer flag.
